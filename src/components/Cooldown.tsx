@@ -1,5 +1,5 @@
 import React from 'react'
-import YouTube, { YouTubeProps } from 'react-youtube';
+import YouTube, { YouTubeEvent, YouTubeProps } from 'react-youtube';
 import './Cooldown.css'
 
 function Cooldown() {
@@ -9,6 +9,9 @@ function Cooldown() {
             autoplay: 1,
         },
     };
+    function handleVideoPlaying(event: YouTubeEvent<number>) {
+        console.log(event);
+    }
     return (
         <>
             <header>
@@ -20,7 +23,8 @@ function Cooldown() {
                         videoId="5qap5aO4i9A"
                         opts={opts}
                         iframeClassName="card shadow-md"
-                        className="youtubeContainer" />
+                        className="youtubeContainer"
+                        onPlay={handleVideoPlaying} />
                 </div>
             </div>
             </>
