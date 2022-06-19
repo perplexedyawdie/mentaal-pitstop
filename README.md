@@ -1,7 +1,8 @@
 # Welcome to Mental Pitstop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-I made this for MLH Mental Hacks II.
+
+I made this for MLH Mental Health Hacks II.
 
 ## Idea 🧠
 
