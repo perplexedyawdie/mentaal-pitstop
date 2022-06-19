@@ -1,6 +1,13 @@
 export interface PitstopNav {
     currLoc: number;
     setCurrLoc: React.Dispatch<React.SetStateAction<number>>;
+    mindfullnessAnswers: IMinfullnessQA[]
+    setMindfullnessAnswers: React.Dispatch<React.SetStateAction<IMinfullnessQA[]>>;
+}
+
+export interface IMinfullnessQA {
+    header: string;
+    body: string;
 }
 
 export enum NavCount {

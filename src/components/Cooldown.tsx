@@ -15,7 +15,7 @@ function Cooldown() {
     function handleVideoPlaying(event: YouTubeEvent<number>) {
         setTimeout(() => {
             setCurrLoc(prev => prev+1)
-        }, 5000);
+        }, 60000);
     }
     return (
         <>
