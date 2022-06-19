@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Welcome to Mental Pitstop 🧘‍♀️🧘‍🏁♂️
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I made this for MLH Mental Hacks II.
+
+The idea is to use a form a mindful journalling from dialectic behavioral therapy to investigate your feelings about a situation in order to form a birds eye view of how it affects you + your thoughts on it.
 
 ## Available Scripts
 
