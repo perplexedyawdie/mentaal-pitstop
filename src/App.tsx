@@ -4,9 +4,39 @@ import GetStarted from './components/GetStarted';
 import Main from './components/Main';
 import MindfullnessCards from './components/MindfullnessCards';
 import { NavContext } from './context/NavContext';
+import { NavCount } from './models/nav.model';
 
 function App() {
-  const [currLoc, setCurrLoc] = React.useState<number>(1)
+  const [currLoc, setCurrLoc] = React.useState<number>(0)
+  const [currComp, setCurrComponent] = React.useState<JSX.Element>(<Main />);
+
+  React.useEffect(() => {
+    switch (currLoc) {
+      case NavCount.MAIN:
+        setCurrComponent(<Main />)
+        break;
+      case NavCount.COOLDOWN:
+        setCurrComponent(<Cooldown />)
+
+        break;
+      case NavCount.GET_STARTED:
+        setCurrComponent(<GetStarted />)
+
+        break;
+      case NavCount.MINDFULLNESS_CARDS:
+        setCurrComponent(<MindfullnessCards />)
+
+        break;
+      case NavCount.BIRDS_EYE_VIEW:
+        setCurrComponent(<Main />)
+
+        break;
+      default:
+        setCurrComponent(<Main />)
+        break;
+    }
+  }, [currLoc])
+
 
   return (
     <NavContext.Provider value={{
@@ -19,10 +49,7 @@ function App() {
             <header>
               <img className='m-auto' src='/assets/images/header-2.png' alt='Mental Pitstop' />
             </header>
-            {/* <Main /> */}
-            {/* <Cooldown /> */}
-            {/* <GetStarted /> */}
-            <MindfullnessCards />
+            {currComp}
           </div>
         </div>
       </div>

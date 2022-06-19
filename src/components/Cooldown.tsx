@@ -1,8 +1,11 @@
 import React from 'react'
 import YouTube, { YouTubeEvent, YouTubeProps } from 'react-youtube';
+import { NavContext } from '../context/NavContext';
 import './Cooldown.css'
 
 function Cooldown() {
+    const { setCurrLoc } = React.useContext(NavContext)!
+
     const opts: YouTubeProps['opts'] = {
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
@@ -10,7 +13,9 @@ function Cooldown() {
         },
     };
     function handleVideoPlaying(event: YouTubeEvent<number>) {
-        console.log(event);
+        setTimeout(() => {
+            setCurrLoc(prev => prev+1)
+        }, 5000);
     }
     return (
         <>
