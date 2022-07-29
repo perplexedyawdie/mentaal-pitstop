@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 I made this for MLH Mental Health Hacks II.
 
+Check it out here: (Mental Pitstop)[https://mentaal-pitstop.pages.dev/]
+
 ## Idea 🧠
 
 The idea is to use a form a mindful journalling with techniques from Dialectical Behavior Therapy to investigate your feelings about a situation in order to form a birds eye view of how it affects you + your thoughts on it.
