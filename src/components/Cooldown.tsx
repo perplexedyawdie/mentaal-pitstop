@@ -25,7 +25,7 @@ function Cooldown() {
             <div className="card bg-slate-50 shadow-xl">
                 <div className="card-body p-4">
                 <YouTube
-                        videoId="5KAN9_CzSA"
+                        videoId="8YA825ZNAIE"
                         opts={opts}
                         iframeClassName="card shadow-md"
                         className="youtubeContainer"
